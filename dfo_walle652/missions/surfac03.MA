@@ -4,6 +4,7 @@ behavior_name=surface
 # Hand Written
 # 10 July 2010 ballsup@webbresearch.com based on legacy surfac10.ma
 # 08 June 2012 ballsup@webbresearch.com increased surface time to "normal"
+# 2017-08-24 lcooney@teledyne.com Added c_use_bpump 0 for Autoballast (M#1577)
 
 # Come up briefly if "yo" finishes 
 # This happens if a bad altimeter hit causes a dive and climb to
@@ -16,11 +17,8 @@ behavior_name=surface
     b_arg: gps_wait_time(s)         300           # how long to wait for gps
     b_arg: keystroke_wait_time(sec) 300           # how long to wait for control-C
     b_arg: when_wpt_dist(m)         10            # how close to waypoint before surface, only if start_when==7
+    b_arg: c_use_bpump(enum)    0  # use autoballast on surface climb (requires autoballast yo)
     b_arg: c_use_pitch(enum)        3             # 3:servo
     b_arg: c_pitch_value(X)         0.4538        # 26 deg
 
 <end:b_arg>
-
- 
- 
-   
